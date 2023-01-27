@@ -439,6 +439,7 @@ video {
 
 .inside {
     width: 1180px;
+    margin-bottom: 80px;
 }
 
 .inside__title {
@@ -495,4 +496,42 @@ video {
     border-color: var(--dark);
 }
 
+.news {
+    width: 1180px;
+    margin-bottom: 100px;
+}
 
+.news__title {
+    font-size: 13px;
+    line-height: 20px; 
+    font-weight: 900;
+    letter-spacing: 1.73px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.news__list {
+    display: flex;
+    gap: 120px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.news__item {
+    width: 280px;
+}
+
+.news__description {
+    font-size: 20px;
+    line-height: 30px; 
+    font-weight: 300;
+}
+
+.news__date {
+    font-size: 15px;
+    line-height: 20px; 
+    font-weight: 300;
+    color: var(--cool-grey);
+}
