@@ -5,8 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontbyte</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header__container">
+            <a class="header__logo">
+                <picture class="header__image-wrapper">
+                    <img src="img/logo-desktop.svg" loading="lazy" width="40" height="40" alt="">
+                </picture>
+            </a>
+            <ul class="menu">
+                <li class="menu__item">
+                    <a class="menu__link">About</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link">Projects</a>
+                </li> 
+                <li class="menu__item">
+                    <a class="menu__link">Services</a>
+                </li> 
+                <li class="menu__item">
+                    <a class="menu__link">Our team</a>
+                </li> 
+                <li class="menu__item">
+                    <a class="menu__link">Events</a>
+                </li> 
+                <li class="menu__item">
+                    <a class="menu__link">Contacts</a>
+                </li>            
+            </ul>
+            <div class="language">
+                <button class="language__button" type="button">No</button>
+                <button class="language__button language__button--current" type="button">En</button>
+                <button class="language__button" type="button">Ru</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="about container">
+            <h2 class="title">We&nbsp;provide digital services and develop our own products in&nbsp;sports and iHealth industry</h2>
+            <p class="about__text">We&nbsp;put technology and sport together to&nbsp;create the world&rsquo;s most efficient and popular sports apps.</p>
+            <a href="#" class="about__link">Drop us a line</a>
+        </section>
+        <section class="activity container">
+            <h2 class="title title--activity">We&nbsp;combine high level of professionalism and individual approach</h2>
+            <p class="activity__text">We&nbsp;have subject domain expertise in&nbsp;various aspects</p>
+            <ul class="direction">
+                <li class="direction__item">
+                    <div class="direction__image direction__image--project"></div>
+                    <h3 class="direction__title">Project management for simple and complex projects</h3>
+                </li>
+                <li class="direction__item">
+                    <div class="direction__image direction__image--hire"></div>
+                    <h3 class="direction__title">Management for hire</h3>
+                </li>
+                <li class="direction__item">
+                    <div class="direction__image direction__image--digital"></div>
+                    <h3 class="direction__title">Digital transformation</h3>
+                </li>
+            </ul>
+            <h2 class="title title--task">What We Do</h2>
+            <ul class="task">
+                <li class="task__item">Development and support of&nbsp;new and existing software systems</li>
+                <li class="task__item">Deep analytics in&nbsp;various spheres</li>
+                <li class="task__item">Insights-driven solutions</li>
+                <li class="task__item">Agile product engineering</li>
+                <li class="task__item">Quality Assurance for new and existing products</li>
+                <li class="task__item">Data collection, research and analysis</li>
+                <li class="task__item">UX/UI concepts and design</li>
+                <li class="task__item">Video and motion design</li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>
