@@ -99,9 +99,8 @@ video {
 }
 
 .container {
-    width: 1440px;
-    padding-left: 130px;
-    padding-right: 130px;
+    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -109,19 +108,27 @@ video {
     font-size: 60px;
     font-weight: 900;
     line-height: 65px;
-    color: var(--pale-grey);
+    color: var(--dark);
     margin: 0;
     margin-bottom: 30px;
 }
 
+.title--about {
+   color: var(--pale-grey);
+}
+
 .title--activity {
-    color: var(--dark);
     width: 780px;
 }
 
 .title--task {
     color: var(--silver);
     margin-bottom: 75px;
+}
+
+.title--work {
+    margin-left: 200px;
+    margin-bottom: 25px;
 }
 
 .header {
@@ -297,4 +304,105 @@ video {
     display: block;
     background-color: var(--dark-sky-blue);
 }
+
+.work {
+    width: 1180px;
+    padding-top: 100px;
+}
+
+.work__text {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0;
+    margin-left: 200px;
+    margin-bottom: 90px;
+}
+
+.work__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-bottom: 100px;
+    padding: 0;
+    list-style: none;
+}
+
+.description {
+    min-height: 600px;
+    margin-bottom: 20px;
+    padding: 200px 200px 20px;
+    background-image: url("img/bg-work.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.description--team {
+    background-image: url("img/img-team.jpg");
+    margin-bottom: 100px;
+}
+
+.description__description {
+    width: 380px;
+    padding: 40px;
+    background-color: var(--dark-sky-blue);
+}
+
+.description__description--team {
+    background-color: var(--pale-grey);
+    margin-left: auto;
+}
+
+.description__title {
+    font-size: 13px;
+    line-height: 20px; 
+    font-weight: 900;
+    letter-spacing: 1.73px;
+    text-transform: uppercase;
+    color: var(--pale-grey);
+    margin: 0;
+    margin-bottom: 39px;
+}
+
+.description__title--team {
+    color: var(--dark);
+}
+
+.description__text {
+    font-size: 30px;
+    line-height: 40px; 
+    color: var(--pale-grey);
+    margin: 0;
+}
+
+.description__text {
+    color: var(--dark);
+}
+
+.project {
+    width: 580px;
+}
+
+.project__title {
+    font-size: 13px;
+    line-height: 20px; 
+    font-weight: 900;
+    letter-spacing: 1.73px;
+    color: var(--dark);
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 39px;
+}
+
+.project__description {
+    font-size: 30px;
+    line-height: 40px;
+    width: 440px;
+    color: var(--dark);
+}
+
+
+
 
