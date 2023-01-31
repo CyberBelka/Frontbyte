@@ -53,7 +53,8 @@
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html,
@@ -97,15 +98,9 @@ video {
     border: 0;
   
     clip: rect(0 0 0 0);
-    clip-path: inset(100%);
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
 }
-
-/* .container {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 calc(50% - 590px);
-} */
 
 .letter-link {
     line-height: 30px;
@@ -120,9 +115,18 @@ video {
     background-position: 500px center;
 }
 
+.letter-link:hover {
+    background-color: var(--dark-sky-blue);
+}
+
 .letter-link--footer {
     background-color: var(--dark-sky-blue);
 }
+
+.letter-link--footer:hover {
+    background-color: transparent;
+}
+
 
 .header {
     margin: 0 auto;
@@ -130,22 +134,37 @@ video {
 }
 
 .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     margin: 0 auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px;
+}
+
+.header__image-wrapper {
+    display: block;
+    width: 40px;
+    height: 40px;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 .header__logo {
-    width: 200px;
-    padding-left: 40px;
+    width: 160px;
+    height: 40px;
+    cursor: pointer;
 }
 
 .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 51px;
     list-style: none;
     width: 780px;
@@ -163,14 +182,16 @@ video {
 }
 
 .menu__link:hover {
-    background-color: var(--dark-sky-blue);
-    color: var(--dark);
+    transform: scale(1.5);
+    transition: 0.3s linear;
 }
 
 .language {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 17px;
-    width: 200px;
+    width: 160px;
 }
 
 .language__button {
@@ -187,7 +208,6 @@ video {
 
 .language__button:hover {
     background-color: var(--dark-sky-blue);
-    color: var(--dark);
     border: 1px solid var(--opacity-white-2);
 }
 
@@ -218,13 +238,24 @@ video {
 .about__text {
     width: 676px;
     color: var(--pale-grey);
-    padding-bottom: 78px;
+    margin-bottom: 78px;
 }
 
 .header__container,
 .about__container {
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--opacity-black-4)), to(var(--opacity-black-4))),
+                url("img/img-header.jpg");
+    background: -o-linear-gradient(var(--opacity-black-4), var(--opacity-black-4)),
+                url("img/img-header.jpg");
     background: linear-gradient(var(--opacity-black-4), var(--opacity-black-4)),
                 url("img/img-header.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--opacity-black-4)), to(var(--opacity-black-4))),
+                -webkit-image-set(url("img/img-header.webp") 1x);
+    background: -o-linear-gradient(var(--opacity-black-4), var(--opacity-black-4)),
+                -webkit-image-set(url("img/img-header.webp") 1x);
+    background: linear-gradient(var(--opacity-black-4), var(--opacity-black-4)),
+                -webkit-image-set(url("img/img-header.webp") 1x);
+    background-color: var(--green);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -260,8 +291,12 @@ video {
 }
 
 .direction {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     list-style: none;
     margin-bottom: 70px;
     padding: 0;
@@ -295,7 +330,7 @@ video {
 .direction__image--digital {
     background-color: var(--darkish-pink);
     background-image: url("img/icon-digital.svg");
-    background-position: 13px 19px;
+    background-position: 17px 19px;
 }
 
 .direction__title {
@@ -306,8 +341,12 @@ video {
 }
 
 .task {
-    column-count: 2;
-    column-gap: 122px;
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 122px;
+       -moz-column-gap: 122px;
+            column-gap: 122px;
     list-style: none;
     width: 880px;
 }
@@ -362,21 +401,36 @@ video {
 }
 
 .work__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    column-gap: 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
     row-gap: 70px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 100px;
     padding: 0;
     list-style: none;
+}
+
+.work__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .description {
     min-height: 600px;
     margin-bottom: 20px;
     padding: 200px 200px 20px;
+    background-color: var(--dark-sky-blue);
     background-image: url("img/bg-work.jpg");
+    background-image: -webkit-image-set(url("img/bg-work.webp") 1x);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -384,6 +438,7 @@ video {
 
 .description--team {
     background-image: url("img/img-team.jpg");
+    background-image: -webkit-image-set(url("img/img-team.webp") 1x);
     margin-bottom: 100px;
 }
 
@@ -394,6 +449,7 @@ video {
     padding: 0;
     padding-top: 220px;
     background-image: url("img/img-inside.jpg");
+    background-image: -webkit-image-set(url("img/img-inside.webp") 1x);
 }
 
 .description__description {
@@ -415,7 +471,7 @@ video {
     width: 400px;
     margin-left: -200px;
     padding-left: 0;
-    padding-right: 60px;
+    padding-right: 60px;   
 }
 
 .description__title {
@@ -454,8 +510,17 @@ video {
     margin-bottom: 55px;
 }
 
+.description__image-wrapper {
+    width: 50px;
+    height: 26px;
+}
+
 .project {
     width: 580px;
+}
+
+.project__image-wrapper {
+    background-color: var(--dark-sky-blue);
 }
 
 .project__title {
@@ -511,6 +576,8 @@ video {
     position: absolute;
     bottom: 0;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 9px;
     list-style: none;
@@ -531,6 +598,10 @@ video {
     border-color: var(--dark);
 }
 
+.slider__dot:hover {
+    background-color: var(--silver);
+}
+
 .news {
     width: 100%;
     padding: 0 calc(50% - 590px);
@@ -547,6 +618,8 @@ video {
 }
 
 .news__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 120px;
     list-style: none;
@@ -585,8 +658,12 @@ video {
 .footer__top-bar {
     position: relative;
     z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 75px;
 }
 
@@ -610,6 +687,8 @@ video {
 .footer__list {
     position: relative;
     z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 118px;
     list-style: none;
@@ -618,9 +697,13 @@ video {
 .footer__bottom-bar {
     position: relative;
     z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 118px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .footer__copyright {
@@ -628,10 +711,14 @@ video {
     opacity: 0.5;
 }
 
-.footer__image {
+.footer__image-wrapper {
     position: absolute;
     top: 180px;
     left: 249px;
+    width: 903px;
+    height: 440px;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .footer__location {
@@ -656,6 +743,8 @@ video {
 }
 
 .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 25px;
     list-style: none;
@@ -665,6 +754,11 @@ video {
     display: block;
     width: 30px;
     height: 30px;
+    color: var(--white);
+}
+
+.social__button:hover {
+    color: var(--dark-sky-blue);
 }
 
 .country {
@@ -702,26 +796,40 @@ video {
     color: inherit;
 }
 
-/* @media (max-width: 1443px) {
-    .header {
-        width: 100%;
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .header__container,
+    .about__container {
+        background: -webkit-gradient(linear, left top, left bottom, from(var(--opacity-black-4)), to(var(--opacity-black-4))),
+                    url("img/img-header.webp");
+        background: -o-linear-gradient(var(--opacity-black-4), var(--opacity-black-4)),
+                    url("img/img-header.webp");
+        background: linear-gradient(var(--opacity-black-4), var(--opacity-black-4)),
+                    url("img/img-header.webp");
+        background: -webkit-gradient(linear, left top, left bottom, from(var(--opacity-black-4)), to(var(--opacity-black-4))),
+                    -webkit-image-set(url("img/img-header@2x.webp") 2x);
+        background: -o-linear-gradient(var(--opacity-black-4), var(--opacity-black-4)),
+                    -webkit-image-set(url("img/img-header@2x.webp") 2x);
+        background: linear-gradient(var(--opacity-black-4), var(--opacity-black-4)),
+                    -webkit-image-set(url("img/img-header@2x.webp") 2x);
+        background-color: var(--green);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
 
-    .header__container {
-        padding: 40px 40px 40px 100px;
+    .description {
+        background-image: url("img/bg-work@2x.jpg");
+        background-image: -webkit-image-set(url("img/bg-work@2x.webp") 2x);
     }
 
-    .menu__item--middle {
-        display: none;
+    .description--team {
+        background-image: url("img/img-team@2x.jpg");
+        background-image: -webkit-image-set(url("img/img-team@2x.webp") 2x);
+    }
+
+    .description--slider {
+        background-image: url("img/img-inside@2x.jpg");
+        background-image: -webkit-image-set(url("img/img-inside@2x.webp") 2x);
     }
 }
-
-@media (max-width: 1443px) {
-    .header__container {
-        padding: 40px 40px 40px 100px;
-    }
-
-    .menu__item--middle {
-        display: none;
-    }
-} */
