@@ -336,11 +336,11 @@ video {
 .direction__title {
     font-size: 20px;
     line-height: 30px;
-    font-weight: 700px;
+    font-weight: 700;
     margin: 0;
 }
 
-.task {
+.activity__list {
     -webkit-column-count: 2;
        -moz-column-count: 2;
             column-count: 2;
@@ -351,7 +351,7 @@ video {
     width: 880px;
 }
 
-.task__title {
+.activity__title-list {
     font-size: 60px;
     font-weight: 900;
     line-height: 65px;
@@ -360,13 +360,13 @@ video {
     margin-bottom: 75px;
 }
 
-.task__item {
+.activity__item {
     position: relative;
     width: 380px;
     margin-bottom: 27px;
 }
 
-.task__item::before {
+.activity__item::before {
     content: "";
     position: absolute;
     top: 15px;
