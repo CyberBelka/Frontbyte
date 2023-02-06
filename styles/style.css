@@ -5,8 +5,8 @@
   
     font-display: swap;
     src:
-      url("fonts/roboto-light.woff2") format("woff2"),
-      url("fonts/roboto-light.woff") format("woff");
+      url("../fonts/roboto-light.woff2") format("woff2"),
+      url("../fonts/roboto-light.woff") format("woff");
 }
 
 @font-face {
@@ -16,8 +16,8 @@
   
     font-display: swap;
     src:
-      url("fonts/roboto-bold.woff2") format("woff2"),
-      url("fonts/roboto-bold.woff") format("woff");
+      url("../fonts/roboto-bold.woff2") format("woff2"),
+      url("../fonts/roboto-bold.woff") format("woff");
 }
 
 @font-face {
@@ -27,8 +27,8 @@
   
     font-display: swap;
     src:
-      url("fonts/roboto-black.woff2") format("woff2"),
-      url("fonts/roboto-black.woff") format("woff");
+      url("../fonts/roboto-black.woff2") format("woff2"),
+      url("../fonts/roboto-black.woff") format("woff");
 }
 
 *,
@@ -100,7 +100,7 @@ video {
     margin-left: -200px;
     padding: 24px 100px 24px 200px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    background-image: url("img/icon-next.svg");
+    background-image: url("../img/icon-next.svg");
     background-repeat: no-repeat;
     background-position: 500px center;
     -webkit-transition: 0.5s;
@@ -119,6 +119,10 @@ video {
 
 .letter-link--footer:hover {
     background-color: transparent;
+}
+
+.letter-link--mobile {
+    display: none;
 }
 
 .heading__title {
@@ -194,29 +198,25 @@ video {
             align-items: center;
     padding: 40px;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))),
-                url("img/img-header.jpg");
+                url("../img/img-header.jpg");
     background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url("img/img-header.jpg");
+                url("../img/img-header.jpg");
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url("img/img-header.jpg");
+                url("../img/img-header.jpg");
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))),
-                -webkit-image-set(url("img/img-header.webp") 1x);
+                -webkit-image-set(url("../img/img-header.webp") 1x);
     background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                -webkit-image-set(url("img/img-header.webp") 1x);
+                -webkit-image-set(url("../img/img-header.webp") 1x);
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                -webkit-image-set(url("img/img-header.webp") 1x);
+                -webkit-image-set(url("../img/img-header.webp") 1x);
     background-color: #93a4a9;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
 }
 
-.header__image-wrapper {
-    display: block;
-    width: 40px;
-    height: 40px;
-    -o-object-fit: contain;
-       object-fit: contain;
+.header__menu-button {
+    display: none;
 }
 
 .logo {
@@ -233,6 +233,16 @@ video {
     height: 40px;
     margin-right: 120px;
     cursor: pointer;
+    -o-object-fit: contain;
+       object-fit: contain;
+    background-image: url("../img/logo-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navigation__button {
+    display: none;
 }
 
 .menu {
@@ -246,7 +256,7 @@ video {
 }
 
 .menu__item:not(:last-child) {
-    margin-right: 51px;
+    margin-right: 48px;
 }
 
 .menu__link {
@@ -313,17 +323,17 @@ video {
 .about {
     padding-top: 172px;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))),
-                url("img/img-header.jpg");
+                url("../img/img-header.jpg");
     background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url("img/img-header.jpg");
+                url("../img/img-header.jpg");
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url("img/img-header.jpg");
+                url("../img/img-header.jpg");
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))),
-                -webkit-image-set(url("img/img-header.webp") 1x);
+                -webkit-image-set(url("../img/img-header.webp") 1x);
     background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                -webkit-image-set(url("img/img-header.webp") 1x);
+                -webkit-image-set(url("../img/img-header.webp") 1x);
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                -webkit-image-set(url("img/img-header.webp") 1x);
+                -webkit-image-set(url("../img/img-header.webp") 1x);
     background-color: #44944a;
     background-repeat: no-repeat;
     background-size: cover;
@@ -350,17 +360,17 @@ video {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-column-gap: 46px;
-       -moz-column-gap: 46px;
-            column-gap: 46px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    width: 900px;
     list-style: none;
     padding: 0;
 }
 
 .direction__item {
-    width: calc((100% - 120px) / 3);
+    display: block;
+    width: calc((100% - 183px) / 3);
+    margin-right: 61px;
     margin-bottom: 70px;
 }
 
@@ -559,6 +569,7 @@ video {
 }
 
 .project__image {
+    width: 100%;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
@@ -625,6 +636,10 @@ video {
 .slider__image-wrapper {
     display: block;
     margin-left: 200px;
+}
+
+.slider__image {
+    width: 100%;
 }
 
 .slider__description {
@@ -707,7 +722,7 @@ video {
 }
 
 .news {
-    width: 100%;
+    width: 1200px;
 }
 
 .news__title {
@@ -729,12 +744,9 @@ video {
 }
 
 .news__item {
-    width: 280px;
-    margin-bottom: 97px;
-}
-
-.news__item:not(:last-child) {
+    width: calc((100% - 360px) / 3);
     margin-right: 120px;
+    margin-bottom: 95px;
 }
 
 .news__link {
@@ -782,7 +794,7 @@ video {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 75px;
+    margin-bottom: 45px;
 }
 
 .footer__title {
@@ -934,18 +946,18 @@ video {
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .about {
         background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))),
-                    url("img/img-header.webp");
+                    url("../img/img-header.webp");
         background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                    url("img/img-header.webp");
+                    url("../img/img-header.webp");
         background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                    url("img/img-header.webp");
+                    url("../img/img-header.webp");
         background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))),
-                    -webkit-image-set(url("img/img-header@2x.webp") 2x);
+                    -webkit-image-set(url("../img/img-header@2x.webp") 2x);
         background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                    -webkit-image-set(url("img/img-header@2x.webp") 2x);
+                    -webkit-image-set(url("../img/img-header@2x.webp") 2x);
         background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                    -webkit-image-set(url("img/img-header@2x.webp") 2x);
-        background-color: #44944a;
+                    -webkit-image-set(url("../img/img-header@2x.webp") 2x);
+        background-color: #93a4a9;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
