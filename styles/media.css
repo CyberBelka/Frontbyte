@@ -1,7 +1,4 @@
 @media (max-width: 1279px) {
-    .footer {
-        display: none;
-    }
     .container {
         width: 100%;
         min-width: 100%;
@@ -23,7 +20,7 @@
     .menu__item:not(:last-child) {
         margin-right: 53px;
     }
-    
+
     .menu__item--middle {
         display: none;
     }
@@ -48,7 +45,7 @@
     .heading__title {
         width: 100%;
     }
-    
+
     .heading__text {
         width: 100%;
     }
@@ -150,7 +147,20 @@
     }
 
     .footer {
+        padding-right: 0;
         padding-left: calc(100px + (200 - 100) * ((100vw - 980px) / (1440 - 980)));
+    }
+
+    .footer__image-wrapper {
+        margin-left: 169px;
+    }
+
+    .footer__location--norway {
+        margin-left: 456px;
+    }
+
+    .footer__location--belarus {
+        margin-left: 513px;
     }
 }
 
@@ -158,6 +168,15 @@
     .container {
         width: 100%;
         max-width: 100%;
+    }
+
+    .letter-link--footer {
+        margin-right: calc(35px + (50 - 35) * ((100vw - 768px) / (980 - 768)));
+    }
+
+    .heading__title--footer {
+        min-width: 297px;
+        margin-right: calc(92px + (118 - 92) * ((100vw - 768px) / (980 - 768)));
     }
 
     .header {
@@ -176,7 +195,7 @@
     .menu__item:not(:last-child) {
         margin-right: 40px;
     }
-    
+
     .language {
         width: 140px;
     }
@@ -207,6 +226,11 @@
     .news__item {
         min-width: 170px;
         margin-right: calc(35px + (50 - 35) * ((100vw - 768px) / (980 - 768)));
+    }
+
+    .footer__description,
+    .country {
+        min-width: 297px;
     }
 }
 
@@ -258,15 +282,21 @@
 
     .heading__title {
         font-size: 25px;
-        line-height: 30px; 
+        line-height: 30px;
         letter-spacing: -0.31px;
         width: 100%;
         margin-bottom: 20px;
         padding-right: 0;
     }
-    
+
     .heading__title--activity,
     .heading__title--activity-list {
+        padding: 0 30px;
+    }
+
+    .heading__title--footer {
+        min-width: auto;
+        padding: 30px 30px 20px;
         padding: 0 30px;
     }
 
@@ -277,12 +307,12 @@
 
     .heading__text {
         font-size: 15px;
-        line-height: 20px; 
+        line-height: 20px;
         width: 100%;
         margin-bottom: 100px;
         padding-right: 0;
     }
-    
+
     .heading__text--activity {
         margin-bottom: 30px;
         padding: 0 30px;
@@ -291,6 +321,11 @@
     .heading__text--work,
     .heading__text--inside {
         margin-bottom: 30px;
+    }
+
+    .heading__text--footer {
+        min-width: auto;
+        padding: 0 30px 20px;
     }
 
     .letter-link {
@@ -311,6 +346,30 @@
         background-color: #64cae1;
         background-size: 20px 20px;
         background-position: 270px center;
+    }
+
+    .letter-link--footer {
+        width: 100%;
+        margin-right: 0;
+        padding: 20px;
+        background-size: 20px 20px;
+        background-position: 270px center;
+    }
+
+    .menu--footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 30px 18px;
+        background-color: #2d2d42;
+    }
+
+    .menu__item--footer:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .letter-link--footer {
+        color: #f4f4f7;
     }
 
     .activity {
@@ -349,7 +408,7 @@
         font-weight: 700;
         width: calc(190px + (456 - 190) * ((100vw - 320px) / (768 - 320)));
     }
-    
+
     .activity__list {
         width: 100%;
         padding: 0 30px;
@@ -394,6 +453,7 @@
 
     .description__description {
         width: 100%;
+        height: auto;
         min-height: auto;
         padding: 30px;
         background-color: #ffffff;
@@ -515,5 +575,50 @@
 
     .news__date {
         font-size: 13px;
+    }
+
+    .footer {
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    .footer__top-bar {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer__list {
+        flex-direction: column;
+        padding: 0 30px;
+    }
+
+    .footer__bottom-bar {
+        flex-direction: column;
+    }
+
+    .footer__image-wrapper {
+        margin: 0;
+    }
+
+    .footer__location {
+        margin: 0;
+    }
+
+    .social {
+        width: 100%;
+        margin: 0;
+        padding: 0 30px 220px;
+    }
+
+    .country {
+        width: 100%;
+        min-width: auto;
+        margin-bottom: 30px;
+    }
+
+    .footer__copyright--footer {
+        width: 100%;
+        padding: 0 30px 30px;
+        background-color: #2d2d42;
     }
 }
