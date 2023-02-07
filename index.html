@@ -12,37 +12,35 @@
     <link rel="preload" href="fonts/roboto-light.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/roboto-bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/roboto-black.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <a class="logo">
-                <picture>
-                    <img src="img/logo-desktop.svg" loading="lazy" alt="">
-                </picture>
-            </a>
-            <nav>
+            <a class="logo"></a>
+            <nav class="navigation">
                 <ul class="menu">
                     <li class="menu__item">
                         <a href="#" class="menu__link">About</a>
                     </li>
                     <li class="menu__item">
                         <a href="#" class="menu__link">Projects</a>
-                    </li> 
+                    </li>
                     <li class="menu__item">
                         <a href="#" class="menu__link">Services</a>
-                    </li> 
+                    </li>
                     <li class="menu__item">
                         <a href="#" class="menu__link">Our team</a>
-                    </li> 
-                    <li class="menu__item">
+                    </li>
+                    <li class="menu__item menu__item--middle">
                         <a href="#" class="menu__link">Events</a>
-                    </li> 
+                    </li>
                     <li class="menu__item">
                         <a href="#" class="menu__link">Contacts</a>
-                    </li>            
+                    </li>
                 </ul>
+                <button class="navigation__button"></button>
             </nav>
             <div class="language">
                 <button class="language__button" type="button">No</button>
@@ -107,6 +105,7 @@
                         <li class="activity__item">UX/UI concepts and design</li>
                         <li class="activity__item">Video and motion design</li>
                     </ul>
+                    <a class="letter-link letter-link--mobile" href="#">Services</a>
             </section>
         </div>
         <div class="container">
@@ -121,7 +120,9 @@
                             <a class="project__link" href="#">
                                 <div class="description description--technology">
                                     <picture>
+                                        <source type="image/webp" media="(max-width: 767px)" srcset="img/img-birdieeyes.webp 1x, img/img-birdieeyes@2x.webp 2x">
                                         <source type="image/webp" srcset="img/bg-work.webp 1x, img/bg-work@2x.webp 2x">
+                                        <source media="(max-width: 767px)" srcset="img/img-birdieeyes.jpg 1x, img/img-birdieeyes@2x.jpg 2x">
                                         <img class="description__image description__image--technology" src="img/bg-work.jpg" srcset="img/bg-work@2x.jpg" loading="lazy" alt="">
                                     </picture>
                                     <div class="description__description description__description--technology">
@@ -136,10 +137,12 @@
                         <article class="project">
                             <a class="project__link" href="#">
                                 <picture class="project__image-wrapper">
+                                    <source type="image/webp" media="(max-width: 767px)" srcset="img/img-upsport-mobile.webp 1x, img/img-upsport-mobile@2x.webp 2x">
                                     <source type="image/webp" srcset="img/img-upsport.webp 1x, img/img-upsport@2x.webp 2x">
+                                    <source media="(max-width: 767px)" srcset="img/img-upsport-mobile.jpg 1x, img/img-upsport-mobile@2x.jpg 2x">
                                     <img class="project__image" src="img/img-upsport.jpg" srcset="img/img-upsport@2x.jpg" loading="lazy" alt="">
                                 </picture>
-                                <h3 class="project__title">UpSport</h3>    
+                                <h3 class="project__title">UpSport</h3>
                             </a>
                             <p class="project__description">Live communication platform that has changed the game for sport clubs, parents and their kids</p>
                         </article>
@@ -151,24 +154,24 @@
                                     <source type="image/webp" srcset="img/img-xland.webp 1x, img/img-xland@2x.webp 2x">
                                     <img class="project__image" src="img/img-xland.jpg" srcset="img/img-xland@2x.jpg" loading="lazy" alt="">
                                 </picture>
-                                <h3 class="project__title">XLand</h3>  
+                                <h3 class="project__title">XLand</h3>
                             </a>
                             <p class="project__description">Digital presence for the first indoor activity park in&nbsp;Norway</p>
                         </article>
                     </li>
-                    <li class="work__item">
+                    <li class="work__item work__item--mobile">
                         <article class="project">
                             <a class="project__link" href="#">
                                     <picture class="project__image-wrapper">
                                         <source type="image/webp" srcset="img/img-phonero.webp 1x, img/img-phonero@2x.webp 2x">
                                         <img class="project__image" src="img/img-phonero.jpg" srcset="img/img-phonero@2x.jpg" loading="lazy" alt="">
                                     </picture>
-                                <h3 class="project__title">Phonero</h3>  
+                                <h3 class="project__title">Phonero</h3>
                             </a>
                             <p class="project__description">Interfaces for the cloud based switchboard applications as&nbsp;well as&nbsp;various desktop and mobile applications</p>
                         </article>
                     </li>
-                    <li class="work__item">
+                    <li class="work__item work__item--mobile">
                         <article class="project">
                             <a class="project__link" href="#">
                                     <picture class="project__image-wrapper">
@@ -181,6 +184,7 @@
                         </article>
                     </li>
                 </ul>
+                <a class="letter-link letter-link--mobile" href="#">All Projects</a>
             </section>
         </div>
         <div class="container">
@@ -200,7 +204,7 @@
             <section class="inside">
                 <div class="heading">
                     <h2 class="heading__title heading__title--inside">Inside Frontbyte</h2>
-                    <p class="heading__text heading__title--inside">We&nbsp;change the way businesses and industries operate.</p>
+                    <p class="heading__text heading__text--inside">We&nbsp;change the way businesses and industries operate.</p>
                 </div>
                 <div class="slider">
                     <ul class="slider__list">
@@ -237,7 +241,6 @@
                             </div>
                         </li>
                     </ul>
-                    
                 </div>
             </section>
         </div>
@@ -278,6 +281,7 @@
                 <div class="footer__top-bar">
                     <div class="heading">
                         <h2 class="heading__title heading__title--footer">Contacts</h2>
+                        <p class="heading__text heading__text--footer">Our head office is&nbsp;located in&nbsp;Norway. Research and development center is located in&nbsp;Belarus.</p>
                     </div>
                     <ul class="social">
                         <li class="social__item">
@@ -306,7 +310,6 @@
                         </li>
                     </ul>
                 </div>
-                <p class="footer__description">Our head office is&nbsp;located in&nbsp;Norway. Research and development center is located in&nbsp;Belarus.</p>
                 <ul class="footer__list">
                     <li class="country">
                         <h3 class="country__title">Norway</h3>
@@ -329,7 +332,27 @@
                 </ul>
                 <div class="footer__bottom-bar">
                     <a href="#" class="letter-link letter-link--footer">Drop us a line</a>
-                    <p class="footer__copyright">&copy;&nbsp;2008&ndash;2018 Frontbyte</p>
+                    <ul class="menu menu--footer">
+                        <li class="menu__item menu__item--footer">
+                            <a href="#" class="menu__link menu__link--footer">About</a>
+                        </li>
+                        <li class="menu__item menu__item--footer">
+                            <a href="#" class="menu__link menu__link--footer">Projects</a>
+                        </li>
+                        <li class="menu__item menu__item--footer">
+                            <a href="#" class="menu__link menu__link--footer">Services</a>
+                        </li>
+                        <li class="menu__item menu__item--footer">
+                            <a href="#" class="menu__link menu__link--footer">Our team</a>
+                        </li>
+                        <li class="menu__item menu__item--middle menu__item--footer">
+                            <a href="#" class="menu__link menu__link--footer">Events</a>
+                        </li>
+                        <li class="menu__item menu__item--footer">
+                            <a href="#" class="menu__link menu__link--footer">Contacts</a>
+                        </li>
+                    </ul>
+                    <p class="footer__copyright footer__copyright--footer">&copy;&nbsp;2008&ndash;2018 Frontbyte</p>
                 </div>
                 <picture class="footer__image-wrapper">
                     <source type="image/webp" srcset="img/img-map.webp 1x, img/img-map@2x.webp 2x">
